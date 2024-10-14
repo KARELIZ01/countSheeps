@@ -12,8 +12,13 @@ function countSheeps(list) {
         return "UPS!!! Wolfs eaten Sheeps";
     }
 }
- // Caso de prueba
- const list = [false, false, false];
 
-const result = countSheeps(list);
-console.log(result)
+// Caso de prueba sin ovejas
+const testList = [false, false, false];
+const result = countSheeps(testList);
+console.log(result);
+
+// Caso adicional con ovejas presentes
+const testList2 = [true, false, true, true, false];
+const result2 = countSheeps(testList2);
+console.log(result2);
