@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheep Counter</title>
+</head>
+<body>
+    <h1>Sheep Counter</h1>
+    <div id="result"></div>
+
+    <script>
+        function countSheeps(list) {
+            let sheepCount = 0;
+            for (let i = 0; i < list.length; i++) {
+                if (list[i] === true) {
+                    sheepCount++;
+                }
+            }
+            
+            if (sheepCount > 0) {
+                return `There are ${sheepCount} sheep in total`;
+            } else {
+                return "UPS!!! Wolfs eaten Sheeps";
+            }
+        }
+
+        // Caso de prueba
+        const list = [false, false, false];
+        
+        const result = countSheeps(list);
+        document.getElementById('result').textContent = result;
+    </script>
+</body>
+</html>
